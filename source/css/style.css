@@ -425,3 +425,94 @@ html {
   /* [5] */
   -webkit-font-smoothing: antialiased;
   /* [5] */ }
+
+/*
+* BUTTONS
+*/
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/**
+ * A simple button object.
+ */
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  overflow: visible;
+  /* [6] */
+  padding: 12px 24px;
+  /* [7] */
+  background-color: #4a8ec2;
+  border: none;
+  /* [4] */ }
+
+.btn, .btn:hover, .btn:active, .btn:focus {
+  text-decoration: none;
+  /* [4] */
+  color: #fff; }
+
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+     * Small buttons.
+     */
+.btn--small {
+  padding: 6px 12px;
+  /* [7] */ }
+
+/**
+     * Large buttons.
+     */
+.btn--large {
+  padding: 24px 48px;
+  /* [7] */ }
+
+/**
+     * Full-width buttons.
+     */
+.btn--full {
+  width: 100%; }
+
+/**
+     * Round-ended buttons.
+     *
+     * 1. Overly-large value to ensure the radius rounds the whole end of the
+     *    button.
+     */
+.btn--pill {
+  border-radius: 100px;
+  /* [1] */ }
+
+.btn:hover {
+  background-color: #5d9ac8; }
+
+/*------------------------------------*    #BLOCKS
+\*------------------------------------*/
+/**
+ * 1) Blocks are collections of text and/or images/media working together as a unit.
+ */

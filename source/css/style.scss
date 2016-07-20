@@ -9,13 +9,42 @@
 */
 
 /* The inuitcss defaults module contains a few variables and settings that are required for using any of the rest of the framework. */
-@import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-defaults/settings.defaults"; // getting started
 
-@import "bower_components/inuit-functions/tools.functions";
-@import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-functions/tools.functions"; // getting started
+@import "bower_components/inuit-mixins/tools.mixins"; // getting started
 
-@import "bower_components/inuit-normalize/generic.normalize";
-@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-normalize/generic.normalize"; // getting started
+@import "bower_components/inuit-box-sizing/generic.box-sizing"; // getting started
 
-@import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-page/base.page"; // getting started
 
+
+
+/*
+* BUTTONS
+*/
+
+$inuit-enable-btn--small:   true;
+$inuit-enable-btn--large:   true;
+$inuit-enable-btn--full:    true;
+$inuit-enable-btn--pill:    true;
+
+// Here we set a variable assuming that `box-sizing: border-box;` is not set
+// globally. If it has been previously been defined, the following variable will
+// be overriden and will be set to `true`.
+$inuit-global-border-box: true;
+
+// Buttons to not have borders
+$inuit-btn-border-width: 0px;
+
+@import "bower_components/inuit-buttons/objects.buttons"; 
+
+.#{$inuit-btn-namespace}btn,
+%#{$inuit-btn-namespace}btn {
+    &:hover {
+        background-color: lighten($inuit-btn-background, 5%);
+    }
+}
+
+@import "blocks";
