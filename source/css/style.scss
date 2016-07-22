@@ -8,11 +8,30 @@
 * Trumps: High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {})
 */
 
+ ///*------------------------------------*\
+ //    #SETTINGS
+ //\*------------------------------------*/
+
+ $inuit-global-border-box: true;
+
 /* The inuitcss defaults module contains a few variables and settings that are required for using any of the rest of the framework. */
 @import "bower_components/inuit-defaults/settings.defaults"; // getting started
 
+@import "bower_components/inuit-responsive-settings/_settings.responsive";
+
+ ///*------------------------------------*\
+ //    #TOOLS
+ //\*------------------------------------*/
+
 @import "bower_components/inuit-functions/tools.functions"; // getting started
 @import "bower_components/inuit-mixins/tools.mixins"; // getting started
+
+@import "bower_components/inuit-tools-widths/_tools.widths";
+@import "bower_components/inuit-responsive-tools/_tools.responsive";
+
+ ///*------------------------------------*\
+ //    #GENERIC
+ //\*------------------------------------*/
 
 @import "bower_components/inuit-normalize/generic.normalize"; // getting started
 @import "bower_components/inuit-box-sizing/generic.box-sizing"; // getting started
@@ -47,4 +66,37 @@ $inuit-btn-border-width: 0px;
     }
 }
 
+/*
+* MEDIA OBJECTS
+*/
+
 @import "blocks";
+
+/*
+* LAYOUT
+*/
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+$inuit-enable-layout--tiny:     true;
+$inuit-enable-layout--small:    true;
+$inuit-enable-layout--large:    true;
+$inuit-enable-layout--huge:     true;
+$inuit-enable-layout--flush:    true;
+$inuit-enable-layout--rev:      true;
+$inuit-enable-layout--middle:   true;
+$inuit-enable-layout--bottom:   true;
+$inuit-enable-layout--right:    true;
+$inuit-enable-layout--center:   true;
+$inuit-enable-layout--auto:     true;
+
+
+@import "bower_components/inuit-layout/objects.layout"; 
+
+
+
+
+@import "bower_components/inuit-widths/_trumps.widths";
